@@ -1,0 +1,122 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+<div class="la-line-spin-clockwise-fade-rotating">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+</ngx-spinner>
+<div class="container-id" id="changeContainer2" >
+    <div class="row exchange_main_row">
+          <br>
+          <div class="row d-flex justify-content-around">
+            <div class="col-auto alert alert-warning">
+                  <p>Disponibles pour rachat :</p>
+                  <ul>
+                      <li *ngFor="let crypto of isToBuyTab">
+                            {{ crypto.name }}
+                      </li>
+                  </ul>
+            </div>
+
+            <div class="col-auto alert alert-info">
+              <p>Disponibles pour la vente :</p>
+              <ul>
+                  <li *ngFor="let crypto of isToSellTab">
+                        {{ crypto.name }}
+                  </li>
+              </ul>
+            </div>
+          </div>
+          <br>
+          <h4 class="custom-h4">Choisissez la direction de l'échange</h4>
+          <br><br>
+          <!-- <div class="row d-flex justify-content-around">
+                <div class="col-auto operationTitle">
+                      Vous envoyez
+                </div>
+
+                <div class="col-auto operationTitle">
+                      Vous reçevez
+                </div>
+          </div> -->
+          <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-12" id="appendableFirst">
+                  <div class="allCryptos Conf" style="display: none;opacity: 0;">
+                    <div *ngFor="let crypto of isToBuyTab, let i = index" class="gClass" (click)="_chooseCrypto(1,crypto)">
+                          <div>
+                              <img [src]="crypto.filePathImg" alt="">
+                          </div>
+                          <div> {{ crypto.name }}</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                      <div class="ninjamerCustomDropdown" onclick="_showDropdown(this)" state="0" id="firstDrop">
+                            <div class="inputClass">
+                                  <img *ngIf="existFirstChoosen" [src]="firstCryptoChoosen.imgPath" alt="">
+                                  <span>{{ firstCryptoChoosen.name }}</span>
+                            </div>
+                            <div>
+                                 <i class="fas fa-caret-right fa-3x" state="0"></i>
+                            </div>
+                      </div>
+                </div>
+                <div class="col-md-auto d-flex justify-content-center xsRow">
+                  <div class="exchangeIconCol ninjamerInfiniteRotation">
+                     <i class="fas fa-exchange-alt fa-2x"></i>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                      <div class="ninjamerCustomDropdown" onclick="_showDropdown(this)" state="0" id="secondDrop">
+                        <div class="inputClass">
+                              <img *ngIf="existSecondChoosen" [src]="secondCryptoChoosen.imgPath" alt="">
+                              <span>{{ secondCryptoChoosen.name }}</span>
+                        </div>
+                        <div>
+                              <i class="fas fa-caret-right fa-3x" state="0"></i>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 d-flex justify-content-end" id="appendableSecond">
+                  <div class="allCryptos Conf" style="display: none;opacity: 0;">
+                    <div *ngFor="let crypto of isToSellTab, let i = index" class="gClass" (click)="_chooseCrypto(2,crypto)">
+                          <div>
+                              <img [src]="crypto.filePathImg" alt="">
+                          </div>
+                          <div> {{ crypto.name }}</div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <br><br>
+          <div class="row d-flex justify-content-center">
+                <div class="col-auto">
+                      <button type="button" class="btn btn-success goBtn" (click)="continue()">CONTINUER</button>
+                </div>
+          </div>
+          <br>
+    </div>
+</div>
+
+<div id="appendable">
+
+</div>
+
+<div class="allCryptos" style="display: none;">
+    <div *ngFor="let crypto of usedCryptos, let i = index" class="gClass">
+          <div>
+              <img [src]="crypto.img" alt="">
+          </div>
+          <div> {{ crypto.name }}</div>
+    </div>
+</div>

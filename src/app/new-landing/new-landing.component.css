@@ -1,0 +1,131 @@
+.container-fluid
+{
+
+}
+
+.mainRow
+{
+
+}
+
+@media(max-width:767px)
+{
+  .imgOp
+  {
+    width: 70%;
+    height: 180px ;
+  }
+}
+
+
+@media(min-width:768px)
+{
+  .imgOp
+  {
+    width: 100%;
+    height: 230px ;
+  }
+}
+
+@media(min-width:992px)
+{
+  .welcome_option
+  {
+    transform: translate(0px,-45px);
+  }
+
+  .imgOp
+  {
+    width: 95% !important;
+    height: 230px ;
+  }
+
+  /* .imgOp:hover
+  {
+    width: 90% !important;
+    height: 90% !important;
+    transform: translate(-20px,0px);
+    background-color: #2E2E2E !important;
+  } */
+}
+
+.welcome_option
+{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.imgOp
+{
+  border: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  transition: all .5s;
+}
+
+.imgOp img:hover
+{
+    background-color: #e6e6e6 !important;
+}
+
+.imgOp img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+
+.imgOp img
+{
+  background-color: white;
+}
+
+.optionTiltle
+{
+  margin-top: 30px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+}
+
+.optionDesc
+{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.readMore
+{
+  display: flex;
+  justify-content: center;
+}
+
+.readMore button
+{
+  color: white;
+  font-weight: bold;
+  background-color: #00C851 ;
+}
+
+@media(max-width:992px)
+{
+  .readMore
+  {
+    margin-bottom: 15px;
+  }
+}
+
+.cryptoPartners img
+{
+  width: 85px;
+  height: 85px;
+}

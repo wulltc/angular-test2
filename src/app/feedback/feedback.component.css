@@ -1,0 +1,17 @@
+#changeContainer2
+{
+  /* background-image: url(../../assets/img/back04.jpg); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.exchange_main_row
+{
+  min-height: 470px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px !important;
+  display: flex;
+  flex-flow: column ;
+  align-items: center;
+}

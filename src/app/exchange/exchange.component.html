@@ -1,0 +1,103 @@
+<div class="container-id bg-light" id="changeContainer2">
+  <div class="row exchange_main_row">
+        <br><br>
+        <div class="row d-flex justify-content-center">
+              <div class="col-auto title">
+                    ECHANGE DE {{ this.fromCrypto.name | uppercase  }}
+                    VERS
+                    {{ this.toCrypto.name | uppercase }}
+              </div>
+        </div>
+
+      <br>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7 col-lg-5 alert alert-light companyInfos">
+            <p style="margin-bottom: 0px;" *ngIf="isToCalculate">Taux de change : {{ this.exchangeRate }} </p>
+            <!-- <p>Votre remise :</p>
+            <p>Votre tarif :</p>
+            <p>Réserve :</p>
+            <p>Min/Max :</p> -->
+        </div>
+      </div>
+      <br>
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7 col-lg-5 alert alert-light userTransaction">
+              <div>
+                    <p class="inputTitle">Vous donnez ( en dollars )</p>
+                    <p><input type="number" class="form-control" [(ngModel)]="userEntry" (keyup)="_calculateChange($event);"></p>
+              </div>
+
+              <div *ngIf="isToCalculate">
+                <p class="inputTitle">Vous reçevez ( en dollars )</p>
+                <p><input type="number" class="form-control" [(ngModel)]="userReceive"></p>
+              </div>
+
+              <br>
+              <div class="alert alert-danger noPmargin">
+                    <p style="font-weight: bold;text-align: center;text-decoration: underline;">Recapitulatif</p><br>
+                    <p>Vous donnez {{ userEntry }} $</p><br>
+                    <p *ngIf="isToCalculate">Le taux de change est  {{  this.exchangeRate }} </p><br>
+                    <p *ngIf="isToCalculate">Vous reçevrez {{ userReceive }} $</p><br>
+              </div>
+              <br>
+              <div>
+                    <select *ngIf="isWithCash" class="form-control" (change)="_selectPayment($event)">
+                              <option value="0">Choisissez votre moyen de paiement</option>
+                              <option value="WESTERN UNION">Western Union</option>
+                              <option value="RIA">RIA</option>
+                              <option value="WARI">WARI</option>
+                              <option value="MONEYGRAM">MoneyGram</option>
+                              <option value="FLOOZ">Flooz</option>
+                              <option value="TMONEY">T-Money</option>
+                    </select>
+              </div>
+
+              <br>
+              <div [innerHTML]="payementMethodInfos" style="font-weight: bold !important;">
+
+              </div>
+            
+
+              <div *ngIf="demandCode">
+                    <input type="text" class="form-control" [(ngModel)]="transfertCode" placeholder="Entrer le code de retrait">
+              </div>
+              <br>
+              <div>
+                <p class="inputTitle">Adresse portefeuille (Ex: Bitcoin, Etherum)</p>
+                <p><input type="text" class="form-control" [(ngModel)]="walletAdress"></p>
+              </div>
+              <br>
+              <div *ngIf="!isWithCash" style="font-weight:bold;color: black;">
+                    Adresse du portefeuille {{ toCrypto.name }} de destination ->&nbsp;<span class="text-success"> {{ toCrypto.adressTarget }}</span>
+              </div>
+
+              <br><br>
+              <div class="d-flex justify-content-around">
+                  <div class="captchaBOT">
+                      {{ captchaBot }}
+                  </div>
+                  <div style="width: 40%;">
+                      <input type="text" class="form-control" (keyup)="_verifyCaptcha($event)" id="verifyCap">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-auto alert text-danger" style="font-weight: bolder;">
+                    Veuillez saisir le texte ci dessus pour activer l'échange
+                </div>
+              </div>
+              <br>
+              <div class="d-flex justify-content-center">
+                <div class="col-auto">
+                      <button type="button" class="btn btn-danger goBtn" id="goBtn" disabled (click)="_exchangeCrypto()">ECHANGER&nbsp;&nbsp;<i class="fas fa-sync"></i></button>
+                </div>
+              </div>
+              <br>
+        </div>
+      </div>
+      <br><br>
+
+  </div>
+  <app-supported-cryptos></app-supported-cryptos>
+</div>
+

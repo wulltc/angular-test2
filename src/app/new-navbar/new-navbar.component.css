@@ -1,0 +1,265 @@
+@media(min-width:992px)
+{
+  .navbar-nav
+  {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav li
+  {
+    margin-right: 5px;
+  }
+
+  .topRow
+  {
+    height: 250px;
+  }
+
+  .greetingRow
+  {
+    margin-top: 15px;
+  }
+
+  .transactionLi
+  {
+    width: 170px !important;
+  }
+
+  .transactionLi a
+  {
+    width: 100% !important;
+  }
+
+}
+
+
+.topRow
+{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  /*   */
+  -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.18);
+  box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.18);
+}
+
+nav
+{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+nav li a
+{
+  color: white;
+  width: 120px;
+  text-align: center;
+  min-width: 130px;
+}
+
+nav li
+{
+  background-color: #ff4444;
+  color: white;
+  font-weight: bold;
+}
+
+@media(min-width:992px) and (max-width:1101px)
+{
+  .navbar-brand img
+  {
+    transform: translate(0px,-18%) !important;
+  }
+}
+
+.navbar-brand img
+{
+  width: 200px;
+  height: 200px;
+  transform: translate(0px,-40%);
+  position: absolute;
+}
+
+.hamMenu
+{
+  width: 50px;
+  height: 50px;
+}
+
+.noMarginXs
+{
+  width: 100%;
+}
+
+/*  */
+#toggleNavBarXs
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navbarC
+{
+  min-height: 150px;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #bdb3b3;
+}
+
+.logo_nav
+{
+  width: 120px;
+  height: 120px;
+}
+
+.cotations
+{
+  min-height: 40px;
+  background-color: white !important;
+}
+
+.navBar
+{
+  background-color: white ;
+  padding: 0px !important;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navBar button
+{
+  border-radius: 0px !important;
+  margin-right: 5px;
+  transition: all .4s;
+}
+
+.navBar button:hover
+{
+  background-color: #eee;
+  color: rgb(122, 97, 97) !important;
+}
+
+.navBar button:nth-child(5)
+{
+  margin-right: 0px !important;
+}
+
+@media(max-width:767px)
+{
+  .navBar
+  {
+    display: none;
+  }
+
+  .navbarC .col-auto:nth-child(2)
+  {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .navBarXs
+  {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 20px;
+  }
+
+  .navBarXs button
+  {
+    margin-top: 15px;
+    display: none;
+  }
+
+  .daaa
+  {
+    margin-top: 20px;
+
+  }
+
+  .xs-only .daaa img
+  {
+    width: 40px;
+    height: 40px;
+  }
+
+  .marginXs
+  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .noMarginXs
+  {
+    margin: 0px ;
+  }
+
+  .cotations
+  {
+    padding: 10px;
+  }
+}
+
+
+@media(min-width:768px)
+{
+  .navBarXs
+  {
+    display: none;
+  }
+}
+
+@media(min-width:768px) and (max-width:991px)
+{
+  .nav-btn
+  {
+    margin-left: 10px;
+  }
+}
+
+.daaa
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar .nav-btn:nth-child(1)
+{
+  margin-left: 15px;
+}
+
+.nav-btn img
+{
+  height: 40px !important;
+  width: 120px !important;
+}
+
+.nav-btn
+{
+  border-radius: 0px;
+}
+
+.greetingRow
+{
+  /* color: white; */
+  width: 100% !important;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+@media(max-width:992px)
+{
+  #basicExampleNav
+  {
+    display: none !important;
+  }
+}
+

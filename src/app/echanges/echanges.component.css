@@ -1,0 +1,269 @@
+#changeContainer2
+{
+  background-image: url(../../assets/img/back04.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.exchange_main_row
+{
+  min-height: 470px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px !important;
+  display: flex;
+  flex-flow: column ;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width:767px)
+{
+  .exchange_main_row .row
+  {
+    width: 100%;
+  }
+
+  .xsRow
+  {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .custom-h4
+  {
+    font-size: 17px;
+  }
+}
+
+@media(min-width:768px)
+{
+  .exchange_main_row .row
+  {
+    width: 100%;
+  }
+}
+
+@media(min-width:992px)
+{
+  .exchange_main_row .row
+  {
+    width: 90%;
+  }
+}
+
+@media(min-width:1280px)
+{
+  .exchange_main_row .row
+  {
+    width: 80%;
+  }
+}
+
+@media(min-width:1440px)
+{
+  .exchange_main_row
+  {
+    min-height: 550px !important;
+  }
+
+  .ninjamerCustomDropdown div:first-child
+  {
+    height: 100px !important;
+  }
+
+  .ninjamerCustomDropdown div:last-child
+  {
+    height: 100px !important;
+  }
+}
+
+.container .row
+{
+  width: 100%;
+}
+
+.mtop10
+{
+  width: 100% !important;
+  margin-top: 15px;
+}
+
+.operationTitle
+{
+  color: black;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.opContainer
+{
+  display: flex;
+  flex-flow: column;
+}
+
+.ninjamerCustomDropdown
+{
+  display: flex;
+  flex-flow: row nowrap;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.08);
+  box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.08);
+}
+
+.ninjamerCustomDropdown div:first-child
+{
+  width: 80%;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ninjamerCustomDropdown div:last-child
+{
+  width: 20%;
+  height: 80px;
+  background-color: #00C851;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ninjamerCustomDropdown i
+{
+  color: white;
+}
+
+.exchangeIconCol
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: #DC3545;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ninjamerInfiniteRotation
+{
+  animation: ninjamerRotation 1s infinite;
+}
+
+.rotateToLoad
+{
+  animation: ninjamerTo0Rotation .5s forwards;
+}
+
+.rotateToLoadReverse
+{
+  animation: ninjamerTo0RotationReverse .5s forwards;
+}
+
+.rotateToUnloaded
+{
+  animation: ninjamerTo90Rotation .5s forwards;
+}
+
+.rotateToUnloadedReverse
+{
+  animation: ninjamerTo90RotationReverse .5s forwards;
+}
+
+
+@keyframes ninjamerRotation
+{
+  from
+  {
+    transform: rotate(0deg);
+  }
+  to
+  {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes ninjamerTo90Rotation
+{
+  from
+  {
+    transform: rotate(0deg);
+  }
+  to
+  {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes ninjamerTo90RotationReverse
+{
+  from
+  {
+    transform: rotate(0deg);
+  }
+  to
+  {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes ninjamerTo0Rotation
+{
+  from
+  {
+    transform: rotate(90deg);
+  }
+  to
+  {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes ninjamerTo0RotationReverse
+{
+  from
+  {
+    transform: rotate(-90deg);
+  }
+  to
+  {
+    transform: rotate(0deg);
+  }
+}
+
+.goBtn
+{
+  width: 150px;
+  height: 50px;
+  font-weight: bold !important;
+}
+
+.allCryptos img
+{
+  width: 35px;
+  height: 35px;
+}
+
+.inputClass
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputClass img
+{
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.alert
+{
+  font-weight: bold;
+}

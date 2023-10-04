@@ -1,0 +1,129 @@
+.navbarC
+{
+  min-height: 150px;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #bdb3b3;
+}
+
+.logo_nav
+{
+  width: 120px;
+  height: 120px;
+}
+
+.cotations
+{
+  min-height: 40px;
+  background-color: white !important;
+}
+
+.navBar
+{
+  background-color: white ;
+  padding: 0px !important;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navBar button
+{
+  border-radius: 0px !important;
+  margin-right: 5px;
+  transition: all .4s;
+}
+
+.navBar button:hover
+{
+  background-color: #eee;
+  color: rgb(122, 97, 97) !important;
+}
+
+.navBar button:nth-child(5)
+{
+  margin-right: 0px !important;
+}
+
+@media(max-width:767px)
+{
+  .navBar
+  {
+    display: none;
+  }
+
+  .navbarC .col-auto:nth-child(2)
+  {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .navBarXs
+  {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 20px;
+  }
+
+  .navBarXs button
+  {
+    margin-top: 15px;
+    display: none;
+  }
+
+  .daaa
+  {
+    margin-top: 20px;
+
+  }
+
+  .xs-only .daaa img
+  {
+    width: 40px;
+    height: 40px;
+  }
+
+  .marginXs
+  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .noMarginXs
+  {
+    margin: 0px ;
+  }
+
+  .cotations
+  {
+    padding: 10px;
+  }
+}
+
+
+@media(min-width:768px)
+{
+  .navBarXs
+  {
+    display: none;
+  }
+}
+
+.daaa
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar .nav-btn:nth-child(1)
+{
+  margin-left: 15px;
+}
+
+.nav-btn img
+{
+  height: 40px !important;
+  width: 120px !important;
+}

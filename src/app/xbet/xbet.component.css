@@ -1,0 +1,42 @@
+.btn
+{
+  width: 200px;
+  border-radius: 0px !important;
+  font-weight: bold;
+}
+
+.pageOptions
+{
+  width: 100% !important;
+  margin: 0px;
+  background-color: rgb(128, 125, 125);
+  padding: 40px;
+}
+
+.pageOptions h4
+{
+  color: white;
+  font-weight: bold;
+}
+
+.pageOptions .row
+{
+  width: 100% !important;
+  margin: 0px;
+}
+
+.inputTitle
+{
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width:767px) 
+{
+  .mobileDis div
+  {
+    margin-bottom: 15px;
+  } 
+}

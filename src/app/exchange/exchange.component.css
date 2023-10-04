@@ -1,0 +1,83 @@
+#changeContainer2
+{
+  /* background-image: url(../../assets/img/back04.jpg); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.exchange_main_row
+{
+  min-height: 470px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px !important;
+  display: flex;
+  flex-flow: column ;
+  align-items: center;
+}
+
+.title
+{
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+.exchange_main_row .row
+{
+  width: 100% !important;
+}
+
+.companyInfos p
+{
+  color: black;
+}
+
+.userTransaction
+{
+  display: flex;
+  flex-flow: column;
+}
+
+.userTransaction .inputTitle
+{
+  margin-bottom: 0px;
+  color: black !important;
+  font-weight: bolder;
+}
+
+.userTransaction .inputTitle::after
+{
+  content: " : *";
+  color: black !important;
+  font-weight: bolder;
+}
+
+.noPmargin p
+{
+  margin-bottom: 0px !important;
+  font-weight: bolder;
+}
+
+.cryptoPartners img
+{
+  width: 85px;
+  height: 85px;
+}
+
+.captchaBOT
+{
+  width: 50%;
+  background-color: rgb(204, 204, 99);
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  text-align: center;
+}
+
+.receiverClass p
+{
+  margin-top: 10px;
+  font-weight: bold !important;
+}

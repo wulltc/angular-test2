@@ -1,0 +1,40 @@
+<ngx-spinner bdColor="rgba(0,0,0,0.3)" size = "medium" color = "#00c851" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white;font-weight: bold;"> Chargement en cours ... </p></ngx-spinner>
+<br><br>
+<div class="container">
+      <div class="row userInfos">
+            <div>
+                  {{ customer.name }}
+            </div>
+
+            <div>
+                 {{ customer.email }}
+            </div>
+      </div>
+      <br><br>
+      <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-10 col-md-6 col-lg-4 styleH2 d-flex justify-content-center align-items-center">
+                  <h2>
+                      MES TRANSACTIONS
+                  </h2>
+            </div>
+            <div class="col-auto mobileMt">
+                  <button type='button' class="btn btn-success" id="exchangeBtn" (click)='_switchDatas(0)'>Echanges</button>
+            </div>
+            <div class="col-auto mobileMt">
+              <button type='button' class="btn btn-info" (click)='_switchDatas(1)'>1Xbet</button>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+            <div class="col-12" style="overflow-y: hidden;">
+              <ng2-smart-table [settings]="settings" [source]="this.dataSource"></ng2-smart-table>
+            </div>
+      </div>
+      <br>
+      <div class="row d-flex justify-content-center mobileOnly">
+            <div class="col-auto">
+                  Glisser pour la suite&nbsp;&nbsp;&nbsp;<img src="assets/img/slide.png" alt="">
+            </div>
+      </div>
+      <br>
+</div>

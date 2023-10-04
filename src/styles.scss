@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+.downloadApkButton
+{
+    padding: 5px 15px;
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black;
+}
+
+.modal-content
+{
+    min-height: 300px !important;
+    border-radius: 15px !important;
+}
+
+.modal-title
+{
+    font-weight: bold;
+    font-size: 25px;
+    span
+    {
+        font-size: 25px !important;
+    }
+    .whoDiv
+    {
+        font-weight: bold;
+        color: black !important;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

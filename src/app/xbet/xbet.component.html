@@ -1,0 +1,159 @@
+<div class="container">
+
+      <div class="row">
+            <app-carousel></app-carousel>
+      </div>
+      <br>
+      <div class="row d-flex justify-content-around mobileDis">
+            <div class="col-auto">
+                  <a href="https://1xbet.com" target="_blank">
+                        <button type="button" class="btn btn-danger">
+                                    Créer un compte
+                        </button>
+                  </a>
+            </div>
+
+            <div class="col-auto">
+              <button type="button" class="btn btn-danger" (click)="_switchOption(0)">
+                     <!-- <img src="assets/img/safety-box.png" alt="">&nbsp;&nbsp;&nbsp; -->Dépôt
+              </button>
+            </div>
+
+
+            <div class="col-auto">
+              <button type="button" class="btn btn-danger" (click)="_switchOption(1)">
+                <!-- <img src="assets/img/atm.png" alt="">&nbsp;&nbsp;&nbsp; -->Retrait
+              </button>
+            </div>
+
+            <div class="col-auto">
+                  <button type="button" class="btn btn-danger" (click)="_seeCoupons()">
+                        Coupons
+                  </button>
+                </div>
+
+      </div>
+      <br>
+
+      <div *ngIf="isWithdrawal" class="row pageOptions withdrawalOption">
+
+            <div class="row d-flex justify-content-center">
+                  <div class="col-auto">
+                          <h4>RETRAIT 1XBET</h4>
+                  </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="row row d-flex justify-content-center">
+
+
+                <div class="col-md-5">
+                      <div class="col-12 inputTitle">
+                            ID 1XBET
+                      </div>
+                      <div class="col-12">
+                            <input type="text" class="form-control" [(ngModel)]="idXbetWithdrawal">
+                      </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="col-12 inputTitle">
+                        Code retrait
+                  </div>
+                  <div class="col-12">
+                        <input type="text" class="form-control" [(ngModel)]="withdrawalCode">
+                  </div>
+                </div>
+
+                <div class="col-md-5" style="margin-top:20px;">
+                  <div class="col-12 inputTitle">
+                        Montant
+                  </div>
+                  <div class="col-12">
+                        <input type="numer" class="form-control" [(ngModel)]="withdrawalAmount">
+                  </div>
+                </div>
+
+                <div class="col-md-5" style="margin-top:20px;">
+                  <div class="col-12 inputTitle">
+                        Numéro de reception (T-Money TOGO)
+                  </div>
+                  <div class="col-12">
+                        <input type="number" class="form-control" [(ngModel)]="withdrawalTelephone">
+                  </div>
+                </div>
+
+            </div>
+
+            <div class="row d-flex justify-content-center" style="margin-top: 45px;">
+
+
+              <div class="col-auto">
+                    <button type="button" class="btn btn-success" (click)="_launchWithdrawal()">
+                            Demander le retrait
+                    </button>
+              </div>
+
+          </div>
+
+      </div>
+
+
+      <div *ngIf="isDeposit" class="row pageOptions depositOption">
+
+            <div class="row d-flex justify-content-center">
+                  <div class="col-auto">
+                          <h4>DEPOT 1XBET</h4>
+                  </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="row row d-flex justify-content-center">
+
+
+                <div class="col-md-5">
+                      <div class="col-12 inputTitle">
+                            ID 1XBET
+                      </div>
+                      <div class="col-12">
+                            <input type="text" class="form-control" [(ngModel)]="idXbetDeposit">
+                      </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="col-12 inputTitle">
+                        Montant
+                  </div>
+                  <div class="col-12">
+                        <input type="number" class="form-control" [(ngModel)]="depositAmount">
+                  </div>
+                </div>
+
+                <div class="col-md-5" style="margin-top:20px;">
+                  <div class="col-12 inputTitle">
+                        Numéro d'envoi
+                  </div>
+                  <div class="col-12">
+                        <input type="number" class="form-control" [(ngModel)]="sendingNumber">
+                  </div>
+                </div>
+
+            </div>
+
+            <div class="row d-flex justify-content-center" style="margin-top: 45px;">
+
+
+              <div class="col-auto">
+                    <button type="button" class="btn btn-success" (click)="_launchDeposit()">
+                            Effectuer le dépôt
+                    </button>
+              </div>
+
+          </div>
+
+      </div>
+
+</div>
+<br><br>

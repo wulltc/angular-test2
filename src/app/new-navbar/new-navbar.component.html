@@ -1,0 +1,105 @@
+<!-- '<span style="color:white;font-weight:bold;">OU</span>&nbsp;&nbsp;&nbsp;<span style="color: #4285F4;text-decoration: underline;font-weight:bold;" (click)="_signUp()">Inscrivez vous ici</span>', -->
+<div class="topRow">
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" routerLink="/"><img src="assets/img/logo.png" class="rounded-circle" alt="" ></a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <img src="assets/img/ham.png" onclick="_display_Nav_Xs();" class="hamMenu" alt="">
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" onclick="chooseNav2(this)">
+        <a class="nav-link" routerLink="/"><i class="fas fa-home"></i>&nbsp;HOME
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item" onclick="chooseNav2(this)">
+        <a class="nav-link" routerLink="/exchange"><i class="fab fa-btc"></i>&nbsp;ECHANGES</a>
+      </li>
+      <li class="nav-item" onclick="chooseNav2(this)">
+        <a class="nav-link" routerLink="/faq"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;FAQ</a>
+      </li>
+      <li class="nav-item" onclick="chooseNav2(this)">
+        <a class="nav-link" routerLink="/feedback"><i class="fas fa-comment-alt"></i>&nbsp;FEEDBACK</a>
+      </li>
+      <li class="nav-item"  onclick="chooseNav2(this)">
+        <a class="nav-link" routerLink="/contacts"> <i class="far fa-address-book"></i>&nbsp;CONTACT US</a>
+      </li>
+      <li *ngIf="!isConnected" class="nav-item">
+        <a class="nav-link" (click)="_login()"><i class="fas fa-plug"></i>&nbsp;CONNEXION</a>
+      </li>
+      <li *ngIf="isConnected" class="transactionLi nav-item" routerLink="/mes-transactions" onclick="chooseNav2(this)">
+        <a class="nav-link"><i class="fas fa-user"></i>&nbsp;Mes transactions</a>
+      </li>
+      <li *ngIf="isConnected" style="width: 50px;background-color: black;color: white;display: flex;justify-content: center;align-items: center;" (click)="_signOut()">
+        <a class="nav-link"><i class="fas fa-power-off"></i></a>
+      </li>
+
+      <!-- Dropdown -->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+
+    </ul>
+    <!-- Links -->
+
+    <!-- <form class="form-inline">
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </form> -->
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+<div class="row d-flex justify-content-center noMarginXs">
+
+  <!-- <div class="col-auto navBar">
+        <button type="button" class="btn btn-danger nav-btn" id="exchange_btn" onclick="chooseNav(this)"  routerLink="echanges"><i class="fab fa-btc"></i>&nbsp;&nbsp;ECHANGES</button>
+        <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="faq"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;FAQ</button>
+        <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="feedback"><i class="fas fa-comment-alt"></i>&nbsp;&nbsp;FEEDBACK</button>
+        <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="parteners"><i class="far fa-address-book"></i>&nbsp;&nbsp;PARTENAIRES</button>
+        <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="contacts"><i class="fas fa-address-book"></i>&nbsp;&nbsp;CONTACTS</button>
+        <button type="button" class="btn nav-btn" onclick="chooseNav(this)"  routerLink="contacts"><img src="assets/img/1Xbet.jpg" style="width: 40px;height: 35p;" alt=""></button>
+  </div> -->
+
+  <div class="col-auto navBarXs" id="toggleNavBarXs">
+    <button type="button" class="btn btn-danger nav-btn" id="exchange_btnXs" onclick="chooseNav(this)" routerLink="/"><!--<i class="fas fa-home"></i>&nbsp;&nbsp;-->HOME</button>
+    <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="/exchange"><i class="fab fa-btc"></i>&nbsp;&nbsp;ECHANGES</button>
+    <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="/faq"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;FAQ</button>
+    <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="/feedback"><i class="fas fa-comment-alt"></i>&nbsp;&nbsp;FEEDBACK</button>
+    <button type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"  routerLink="/contacts"><i class="far fa-address-book"></i>&nbsp;&nbsp;CONTACT US</button>
+    <button *ngIf="!isConnected" type="button" class="btn btn-danger nav-btn" (click)="_login()"><i class="fas fa-plug"></i>&nbsp;&nbsp;CONNEXION</button>
+    <button *ngIf="isConnected" routerLink="/mes-transactions" type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"><i class="fas fa-user"></i>&nbsp;Mes transactions</button>
+    <button *ngIf="isConnected" (click)="_signOut()" type="button" class="btn btn-danger nav-btn" onclick="chooseNav(this)"><i class="fas fa-power-off"></i></button>
+    <!-- <button type="button" class="btn nav-btn" onclick="chooseNav(this)"  routerLink="contacts"><img src="assets/img/1Xbet.jpg" style="width: 100%;height: 100%;" alt=""></button> -->
+  </div>
+
+</div>
+
+<br><br>
+<div class="row d-flex justify-content-center greetingRow">
+    <div class="col-10 col-lg-8 " style="font-weight: bold;">
+      
+          Utilisez l'appication mobile pour éffectuer et consulter vos transactions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://files.ben2paris.com/downloadApk/b2p.apk" target="_blank"><button style="background-color: #00C851 !important;color: white !important;border: unset;font-weight: bold;" class="downloadApkButton">Télécharger l'application</button></a>
+          <br><br>
+          Contactez le service client&nbsp;&nbsp;<a href="https://api.whatsapp.com/send/?phone=22898838256&text=Je%20contacte%20le%20service%20client" target="_blank"><img src="assets/img/whatsapp.png" style="transform: translate(5px,-3px);" alt=""></a>
+    </div>
+</div>
+</div>
